@@ -14,9 +14,12 @@ const getAllRecipes = async () => {
   return res.json();
 };
 
+const {data, success} = getAllRecipes()
+console.log(data)
+
 const GetRecipes = async () => {
-  const { success, data } = await getAllRecipes();
-  console.log('fromAllRecipes', data);
+  // const { success, data } = await getAllRecipes();
+  // console.log('fromAllRecipes', data);
   return <h1>cards here</h1>;
 };
 

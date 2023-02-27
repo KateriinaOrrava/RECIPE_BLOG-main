@@ -31,9 +31,7 @@
   text-align: left;
 }
 .inputSubmit {
-  height: 120px;
-  width: 120px;
-  border-radius: 50%;
+  width: 100%;
   font-family: 'Architects Daughter', cursive;
   font-size: 25px;
 }

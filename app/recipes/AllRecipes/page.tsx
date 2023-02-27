@@ -15,7 +15,7 @@ const AllRecipes = () => {
         <Link href="/recipes/addRecipe">Add 🖊️</Link>
       </h5>
       <h1>My Recipes</h1>
-      {/* <GetRecipes /> */}
+      <GetRecipes />
       <h5 className={styles.link}>
         <Link href="/recipes">HOME 🏠</Link>
       </h5>
