@@ -23,15 +23,6 @@ const getRecipes = async (req: NextApiRequest, res: NextApiResponse) => {
       break
   }
 
-  // console.log('CONNECTING TO MONGO');
-  // const {title, image, category, ingredients, directions, _id} = req.query;
-  // if (req.method === 'GET'){
-  //   await MongoConnect();
-  //   console.log('CONNECTED TO MONGO');
-  //   const result=Recipe.find({})
-  //   res.json(result)
-  // }
-
 }
 
 export default getRecipes;
