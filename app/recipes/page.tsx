@@ -11,13 +11,18 @@ import soup from './images/public/soup.jpeg';
 import { RecipeType } from '@/utils/types';
 
 import { GetServerSideProps } from 'next';
+import mongoose from 'mongoose';
+import Recipe from '@/utils/models/models';
 
-interface HomeProps {
-  recipes: RecipeType[];
-}
+// interface HomeProps {
+//   data: RecipeType[];
+// }
 
-const Home = ({recipes} : HomeProps) => {
-  console.log('from home', recipes);
+const Home = () => {
+
+
+
+
   return (
     <main className={styles.main}>
       <h2 title="Share your recipe" className={styles.main_header}>
@@ -83,24 +88,5 @@ const Home = ({recipes} : HomeProps) => {
     </main>
   );
 };
-export const getServerSideProps: GetServerSideProps = async () => {
-  // Fetch data from external API
-  const res = await fetch(`/api/GetRecipes`);
-  console.log('from getServerProps',res)
-  const recipes = await res.json();
-  console.log(recipes);
-  // Pass data to the page via props
-  return { props: { recipes } };
-}
-
-
-// export const getServerSideProps: GetServerSideProps = async (context) => {
-  // Fetch data from external API
-  // mongoose.connect('mongodb://localhost:27017/recipes');
-  // const res= await Recipe.find()
-  // let recipes = await res;
-  // console.log(recipes);
-  // return { props: { recipes } };
-// };
 
 export default Home;
