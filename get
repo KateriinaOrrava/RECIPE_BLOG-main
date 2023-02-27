@@ -1,0 +1,47 @@
+// const GET = async () => {
+
+//    const res = await fetch('/api/GetRecipes',{
+//     method: 'GET',
+//     headers: {
+//       'Content-Type': 'application/json',
+//     },
+//   });
+//   if (!res) {
+//     throw new Error('Failed to fetch data');
+//   }
+//   console.log(res)
+// };
+
+
+
+// async function getData() {
+    //   const res = await fetch('page/api/getRecipes');
+    //   if (!res.ok) {
+    //     throw new Error('Failed to fetch data');
+    //   }
+    //   return res.json();
+    // }
+
+    // getData();
+    ////////////////////////////////////////
+    // const res = fetch('/api/GetRecipes');
+    //   if (!res) {
+    //     throw new Error('Failed to fetch data');
+    //   }
+    //   console.log(res)
+    //////////////////////////////////////////////
+    //neder
+    // await connect('mongodb://localhost:27017/recipes');
+    // const data = await Recipe.find({});
+    // if (!data) {
+    //   console.log('no data');
+    //   return error;
+    // }
+    // if (error) {
+    //   console.log(error)
+    // }
+    // if (data) {
+    //   console.log(data);
+    //   return { props: { data } };
+    // }
+    //error: TypeError: Cannot read properties of undefined (reading 'Recipe')

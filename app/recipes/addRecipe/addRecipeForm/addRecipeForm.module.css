@@ -1,0 +1,79 @@
+.container_for_add_recipe {
+  font-family: 'Architects Daughter', cursive;
+  width: 50%;
+  max-height: max-content;
+}
+.addNewRecipeForm {
+  font-family: 'Architects Daughter', cursive;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-items: center;
+
+  padding: 40px;
+  border-radius: 20px;
+  width: 100%;
+  min-width: 500px;
+  align-items: center;
+}
+.inputField {
+  line-height: 40px;
+  font-size: 30px;
+  font-family: 'Architects Daughter', cursive;
+  color:grey;
+  width: 100%;
+  text-align: left;
+  background: linear-gradient(to right, rgb(236, 234, 235), rgb(250, 246, 246));
+}
+.inputLabel {
+  line-height: 40px;
+  width: 100%;
+  text-align: left;
+}
+.inputSubmit {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  font-family: 'Architects Daughter', cursive;
+  font-size: 25px;
+}
+
+.inputSubmit {
+  background: linear-gradient(to right, rgb(238, 156, 167), rgb(255, 221, 225));
+  animation: rainbow-text-animation-rev  0.5s ease forwards;
+  cursor: pointer;
+}
+
+.inputSubmit:hover {
+border: none;
+  animation: rainbow-text-animation 2s ease forwards;
+}
+@keyframes rainbow-text-animation {
+  0% {
+    background-size: 57%;
+    background-position: 0 0;
+  }
+  20% {
+    background-size: 57%;
+    background-position: 0 1em;
+  }
+  100% {
+    background-size: 300%;
+    background-position: -9em 1em;
+  }
+}
+
+@keyframes rainbow-text-animation-rev {
+  0% {
+    background-size: 300%;
+    background-position: -9em 1em;
+  }
+  20% {
+    background-size: 57%;
+    background-position: 0 1em;
+  }
+  100% {
+    background-size: 57%;
+    background-position: 0 0;
+  }
+}

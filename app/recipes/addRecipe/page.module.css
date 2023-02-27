@@ -1,0 +1,13 @@
+.section {
+    font-family: 'Architects Daughter', cursive;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    padding: 6rem;
+    min-height: 100vh;
+    gap: 20%;
+    gap: 40px;
+
+}

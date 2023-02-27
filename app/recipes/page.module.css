@@ -1,0 +1,127 @@
+
+.sticky_links {
+  position: absolute;
+  left: 0;
+  padding-left: 10px;
+}
+.main {
+  font-family: 'Architects Daughter', cursive;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+}
+.linkText {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: rgb(206, 206, 206);
+  color: rgb(11, 11, 11);
+  margin-bottom: 5px;
+  font-family: sans-serif;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: visibility 0s, opacity 0.5s linear;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+.listOfImg {
+  display: flex;
+  flex-direction: column;
+}
+.listOfImg_element {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  float: left;
+  margin-right: 10px;
+}
+.listOfImg_element:hover .linkText {
+  font-family: 'Architects Daughter', cursive;
+  width: 150px;
+  padding: 8px 15px;
+  visibility: visible;
+  opacity: 1;
+  z-index: 2;
+}
+.linkImg {
+  border-radius: 50%;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  transition: filter 0.5s ease-in-out;
+}
+.linkImg:hover {
+  filter: none;
+  -webkit-filter: grayscale(0);
+  opacity: 0.7;
+  z-index: 0;
+}
+
+.main_header {
+  font-size: 150px;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 800;
+  width: 5em;
+  line-height: 0.9em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1.5em;
+  background: #ca4246;
+  background-color: #ca4246;
+  background: conic-gradient(
+    #ca4246 16.666%,
+    #e16541 16.666%,
+    #e0e41b 33.333%,
+    #f18f43 33.333%,
+    #f18f43 50%,
+    #8b9862 50%,
+    #8b9862 66.666%,
+    #879ac3 66.666%,
+    #bded44 83.333%,
+    #e94e7d 83.333%
+  );
+  background-size: 57%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbow-text-animation-rev 1s ease forwards;
+  cursor: pointer;
+}
+
+.main_header:hover {
+  animation: rainbow-text-animation 2s ease forwards;
+}
+@keyframes rainbow-text-animation {
+  0% {
+    background-size: 57%;
+    background-position: 0 0;
+  }
+  20% {
+    background-size: 57%;
+    background-position: 0 1em;
+  }
+  100% {
+    background-size: 300%;
+    background-position: -9em 1em;
+  }
+}
+
+@keyframes rainbow-text-animation-rev {
+  0% {
+    background-size: 300%;
+    background-position: -9em 1em;
+  }
+  20% {
+    background-size: 57%;
+    background-position: 0 1em;
+  }
+  100% {
+    background-size: 57%;
+    background-position: 0 0;
+  }
+}
