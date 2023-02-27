@@ -8,7 +8,15 @@ export interface ResponseFunction {
 
 // Interface to define our Todo model on the frontend
 export interface RecipeType {
-  _id?: number;
+  title: String;
+  category: String;
+  ingredients: String;
+  directions: String;
+  image: String;
+}
+
+export interface ResponseRecipeType {
+  _id:String;
   title: String;
   category: String;
   ingredients: String;

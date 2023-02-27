@@ -1,4 +1,9 @@
-.section {
+.container_for_all_recipes {
+    font-family: 'Architects Daughter', cursive;
+    width: 50%;
+    max-height: max-content;
+  }
+  .section {
     font-family: 'Architects Daughter', cursive;
     display: flex;
     flex-direction: column;

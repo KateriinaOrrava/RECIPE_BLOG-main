@@ -8,26 +8,13 @@ import drinks from './images/public/drinks.jpeg';
 import main from './images/public/main.jpeg';
 import snack from './images/public/snack.jpeg';
 import soup from './images/public/soup.jpeg';
-import { RecipeType } from '@/utils/types';
-
-import { GetServerSideProps } from 'next';
-import mongoose from 'mongoose';
-import Recipe from '@/utils/models/models';
-
-// interface HomeProps {
-//   data: RecipeType[];
-// }
 
 const Home = () => {
-
-
-
-
   return (
     <main className={styles.main}>
-      <h2 title="Share your recipe" className={styles.main_header}>
-        <Link href="/recipes/addRecipe">+</Link>
-      </h2>
+      <h3 title="Share your recipe" className={styles.link_header}>
+        <Link href="/recipes/addRecipe">🖊️</Link>
+      </h3>
       <h1 className={styles.main_header}>RECIPES</h1>
 
       <div className={styles.sticky_links}>
@@ -84,7 +71,10 @@ const Home = () => {
           </li>
         </ul>
       </div>
-      <div className={styles.recipes}></div>
+      <h3 title="Explore recipes" className={styles.link_header}>
+        <Link href="/recipes/allRecipes">📚</Link>
+      </h3>
+      {/* <div className={styles.recipes}><AllRecipes /></div> */}
     </main>
   );
 };

@@ -61,7 +61,11 @@
   opacity: 0.7;
   z-index: 0;
 }
-
+.link_header a{
+  font-size: 150px;
+  margin:0;
+  text-decoration: none;
+}
 .main_header {
   font-size: 150px;
   font-family: 'Work Sans', sans-serif;
@@ -70,7 +74,7 @@
   line-height: 0.9em;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 1.5em;
+
   background: #ca4246;
   background-color: #ca4246;
   background: conic-gradient(
