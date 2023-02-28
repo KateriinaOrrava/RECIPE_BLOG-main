@@ -14,7 +14,7 @@ const AddRecipeForm = () => {
   const handleSubmit = async (event: { preventDefault: () => void }) => {
     event.preventDefault();
 
-    let newRecipe:RecipeType = {
+    let newRecipe: RecipeType = {
       title: title,
       category: category,
       ingredients: ingredients,
@@ -68,6 +68,13 @@ const AddRecipeForm = () => {
         <label htmlFor="category" className={styles.inputLabel}>
           Category
         </label>
+        <select title="selectedCategory" name="selectedCategory" onChange={(e) => setCategory(e.target.value)}>
+          <option value="Deserts">Deserts</option>
+          <option value="Soups">Soups</option>
+          <option value="Drinks">Drinks</option>
+          <option value="Mains">Mains</option>
+          <option value="Snacks">Snacks</option>
+        </select>
         <input
           type="text"
           id="category"
@@ -75,7 +82,7 @@ const AddRecipeForm = () => {
           required
           value={category}
           className={styles.inputField}
-          onChange={(e) => setCategory(e.target.value)}
+          disabled
         />
 
         <label htmlFor="directions" className={styles.inputLabel}>

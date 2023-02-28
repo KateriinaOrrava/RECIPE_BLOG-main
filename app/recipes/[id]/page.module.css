@@ -1,0 +1,60 @@
+.section {
+    font-family: 'Architects Daughter', cursive;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    padding: 6rem;
+    min-height: 100vh;
+    gap: 20%;
+    gap: 40px;
+}
+.button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: 'Architects Daughter', cursive;
+    font-size: 25px;
+  }
+  
+  .button {
+    background: linear-gradient(to right, rgb(238, 156, 167), rgb(255, 221, 225));
+    animation: rainbow-text-animation-rev  0.5s ease forwards;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+  border: none;
+    animation: rainbow-text-animation 2s ease forwards;
+  }
+  @keyframes rainbow-text-animation {
+    0% {
+      background-size: 57%;
+      background-position: 0 0;
+    }
+    20% {
+      background-size: 57%;
+      background-position: 0 1em;
+    }
+    100% {
+      background-size: 300%;
+      background-position: -9em 1em;
+    }
+  }
+  
+  @keyframes rainbow-text-animation-rev {
+    0% {
+      background-size: 300%;
+      background-position: -9em 1em;
+    }
+    20% {
+      background-size: 57%;
+      background-position: 0 1em;
+    }
+    100% {
+      background-size: 57%;
+      background-position: 0 0;
+    }
+  }
+  
