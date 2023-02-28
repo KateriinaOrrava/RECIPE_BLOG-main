@@ -6,7 +6,8 @@ import { getAllRecipes } from './getAllRecipes';
 import styles from './getAllRecipes.module.css';
 
 const RecipeList = async () => {
-  const { data } = await getAllRecipes();
+  const { data }= await getAllRecipes();
+  console.log(data)
   return (
     <>
    {/* <Suspense fallback={<Loading />}> */}
