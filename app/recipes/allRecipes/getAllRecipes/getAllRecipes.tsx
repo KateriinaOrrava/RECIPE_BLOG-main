@@ -1,4 +1,3 @@
-
 import { ResponseRecipeType } from '@/utils/types';
 
 type ResponseRecipeTypeAll = {
@@ -6,8 +5,8 @@ type ResponseRecipeTypeAll = {
   data: ResponseRecipeType[];
 };
 
-export const getAllRecipes = async () => {
-  const res = await fetch('http://localhost:3000/api/getRecipes/');
+export const getAllRecipes = async ():Promise<ResponseRecipeType> => {
+  const res = await fetch('http://localhost:3000/api/getRecipes', {next: {revalidate: 10}});
   if (!res.ok) {
     throw new Error('Failed to fetch');
   }

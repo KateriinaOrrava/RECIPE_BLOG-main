@@ -1,26 +1,32 @@
-import { RecipeType, ResponseRecipeType } from '@/utils/types';
-import Image from 'next/image';
+
+import { ResponseRecipeType } from '@/utils/types';
+import { Suspense } from 'react';
 import Link from 'next/link';
 import { getAllRecipes } from './getAllRecipes';
+import styles from './getAllRecipes.module.css';
 
 const RecipeList = async () => {
   const { data } = await getAllRecipes();
-
   return (
-    <section>
-      <div>
-        <h2>recipes</h2>
-
+    <>
+   {/* <Suspense fallback={<Loading />}> */}
+      <div className={styles.allRecipeCards}>
         {data &&
           data.map((r: ResponseRecipeType) => (
-            <Link href={`/recipes/${r._id}`} key={r._id}>
-              <p>{r.title}</p>
-              <Image src={r.image} alt={''} width="300"></Image>
+            // <Link href={`/${_id}`} className={styles.button}>
+            <Link href={`/recipes/${r._id}`} key={Math.random()}>
+              <div key={Math.random()} className={styles.allRecipeCard}>
+                <p>{r.title}</p>
+              </div>
             </Link>
           ))}
       </div>
-    </section>
+      {/* </Suspense> */}
+    </>
   );
 };
 
 export default RecipeList;
+// function Loading() {
+//   return <h2>🌀 Loading...</h2>;
+// }
